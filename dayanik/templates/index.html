@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <div class="flex-container">
-        <nav class="flex-nav">
+    <div class="topbar">
+        <nav class="nav">
             <a href="{% url 'posts:index' %}">Главная</a>
             <a href="">Разработчику</a>
             <a href="">Книжный клуб</a>
             <a href="">Игры</a>
         </nav>
+    </div>
+    <div class="flex-container">
         <section class="flex-content">
             {% for post in posts %}
             <article class="flex-article">

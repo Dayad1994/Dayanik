@@ -10,4 +10,4 @@ User = get_user_model()
 
 def index(request):
     posts = Post.objects.all()
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'post.html', {'posts': posts})

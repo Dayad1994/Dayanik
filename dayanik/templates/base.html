@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayanik.ru</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="flex-container">
+        {% block content %}
+        {% endblock %}
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>
