@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ru">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Dayanik.ru{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'dayanik.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Привет! Я Даян Исхаков.</h1>
+            <h2>Я бэкенд-разработчик</h2>
+            <div class="content">
+                <h3>Мой стэк:</h3>
+                <ul>
+                    <li>Pyhton</li>
+                    <li>Django</li>
+                    <li>DRF</li>
+                    <li>Git/GitHub</li>
+                    <li>html5/css3</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <footer>
+                <a href="{% url 'posts:dayanik' %}">Dayanik</a>
+                <a href="{% url 'posts:index' %}">Блог</a>
+                <a href="">Книжный клуб</a>
+            </footer>
+        </div>
+    </body>
+</html>

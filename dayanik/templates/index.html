@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head lang="ru">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <div class="topbar">
-        <nav class="nav">
-            <a href="{% url 'posts:index' %}">Главная</a>
-            <a href="">Разработчику</a>
-            <a href="">Книжный клуб</a>
-            <a href="">Игры</a>
-        </nav>
-    </div>
-    <div class="flex-container">
-        <section class="flex-content">
-            {% for post in posts %}
-            <article class="flex-article">
-                <header>
-                    <h2>{{ post.title }}</h2>
-                    <p>@{{ post.author.username }} {{ post.pub_date }}</p>
-                </header>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </article>
-            {% endfor %}
-        </section>
-        <footer class="flex-footer">
-            <p>footer</p>
-        </footer>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <article class="flex-article">
+            <header>
+                <h2>{{ post.title }}</h2>
+                <p>@{{ post.author.username }} {{ post.pub_date }}</p>
+            </header>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

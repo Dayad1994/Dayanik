@@ -7,20 +7,13 @@ body {
     margin: 0;
 }
 
-.topbar {
-    top: 0;
-    width: 100%;
-    position: fixed;
-}
+/*
+===================================================================
+дизайн
+*/
 
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: black;
-    color: #fff;
+.flex-topbar {
     width: 100%;
-    height: 48px;
 }
 
 .flex-container {
@@ -28,35 +21,64 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
-    margin-top: 48px;
+    min-height: 100vh;
+}
+
+.flex-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));
+    color: #fff;
+    width: 100%;
+    padding: 16px;
+}
+
+.flex-nav a {
+    text-decoration: none;
+    padding: 2px;
+}
+
+.flex-nav a:hover {
+    background: darkred;
+    border-radius: 7px;
+}
+
+.flex-nav a:visited {
+    color: #fff;
+}
+
+.flex-nav a:active {
+    color: black;
 }
 
 .flex-content {
     width: 720px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
+    flex-grow: 1;
+    background: linear-gradient(to top, rgb(95, 158, 160, 0.7), rgb(64, 224, 208, 0.5));
     padding-bottom: 50px;
     padding-top: 65px;
 }
 
 .flex-article {
     margin-bottom: 15px;
-    background: #fff;
+    background: lightcyan;
     padding: 20px;
     font-size: 1em;
     border-radius: 10px;
 }
 
 .flex-footer {
+    width: 100%;
+}
+
+.flex-flex-footer {
     display: flex;
     justify-content: space-around;
-    background: black;
+    background: linear-gradient(to top, steelblue, cadetblue);
     color: #fff;
     width: 100%;
-    height: 48px;
+    height: auto;
 }
 
 .flex-article header h2 {
@@ -69,3 +91,55 @@ body {
     color:gray;
     margin: 0;
 }
+
+
+/*
+===================================================================
+форма регистрации
+*/
+
+.signup {
+    background: #fff;
+    padding: 20px;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.signup-header h2 {
+    text-align: center;
+}
+
+
+.signup-field-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+
+.signup-label {
+    width: 30%;
+}
+
+.signup-field {
+    width: 30%;
+}
+
+.signup-help {
+    width: 30%;
+    color: silver;
+    font-size: 0.7em;
+}
+
+.signup-help ul {
+    font-size: 1em;
+    padding-left: 15px;
+}
+
+.signup-submit {
+    margin: 0 auto;
+    width: 30%;
+}
+/*
+===================================================================
+*/
