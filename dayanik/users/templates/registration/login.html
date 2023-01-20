@@ -1,33 +1,5 @@
-{% extends "base.html" %}
+{% extends "form.html" %}
 {% block title %}Войти{% endblock %}
-{% block content %}
-<article class="card">
-    <div class="header">
-        <h2>Войти</h2>
-    </div>
-    <form method="post" action="{% url 'login' %}">
-        <div class="card-form">
-            {% csrf_token %}
-            {% for field in form %}
-                <div class="card-field">
-                    <div class="card-label"><label for="{{ field.id_for_label }}">{{ field.label }}</label></div>
-                    <div class="field">{{ field }}</div>
-                    {% if field.help_text %}
-                        <div class="card-help">{{ field.help_text|safe }}</div>
-                        {% else %}
-                        <div class="card-help"></div>
-                    {% endif %}
-                </div>
-            {% endfor %}
-            <div class="card-submit">
-                <button type="submit">
-                  Войти
-                </button>
-                <a href="{% url 'password_reset' %}">
-                  Забыли пароль?
-                </a>
-            </div>
-        </div>
-    </form>
-</article>
-{% endblock %}
+{% block header %}Войти{% endblock %}
+{% block button %}Войти{% endblock %}
+

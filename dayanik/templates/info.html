@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Титулка{% endblock %}
+{% block content %}
+<article class="card">
+    <div class="header">
+        <h2>{% block header %}Заголовок{% endblock %}</h2>
+        <p>{% block paragraph %}Параграф{% endblock %}</p>
+    </div>  
+</article>
+{% endblock %}

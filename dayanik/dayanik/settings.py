@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'posts',
     'users',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -147,3 +149,6 @@ LOGIN_REDIRECT_URL = 'posts:index'
 # steelblue
 # background: linear-gradient(to top, steelblue, cadetblue);
 # background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));
+
+# Идентификатор текущего сайта
+SITE_ID = 1
