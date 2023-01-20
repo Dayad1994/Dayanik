@@ -6,8 +6,8 @@ User = get_user_model()
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100)
-    text = models.TextField()
+    title = models.CharField(max_length=100, verbose_name='Заголовок')
+    text = models.TextField(verbose_name='Текст')
     author = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True,
                                 null=True, related_name='posts',
                                 verbose_name='Пост')

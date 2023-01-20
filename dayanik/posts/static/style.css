@@ -1,6 +1,7 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url('back_1920x1200.jpg');
+    /*background-image: url('back_1920x1200.jpg');*/
+    background: floralwhite;
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -36,12 +37,13 @@ body {
 
 .flex-nav a {
     text-decoration: none;
-    padding: 2px;
+    padding: 8px 16px;
 }
 
 .flex-nav a:hover {
-    background: darkred;
+    background: linear-gradient(to top, steelblue, cadetblue);
     border-radius: 7px;
+    padding: 8px 16px;
 }
 
 .flex-nav a:visited {
@@ -98,48 +100,82 @@ body {
 форма регистрации
 */
 
-.signup {
-    background: #fff;
+.card {
+    background: lightcyan;
     padding: 20px;
     font-size: 1em;
     border-radius: 10px;
 }
 
-.signup-header h2 {
+.header {
     text-align: center;
 }
 
 
-.signup-field-div {
+.card-field {
     display: flex;
     justify-content: space-evenly;
     margin: 10px 0px;
 }
 
 
-.signup-label {
+.card-label {
     width: 30%;
 }
 
-.signup-field {
+.field {
     width: 30%;
 }
 
-.signup-help {
+.card-help {
     width: 30%;
     color: silver;
     font-size: 0.7em;
 }
 
-.signup-help ul {
+.card-help ul {
     font-size: 1em;
     padding-left: 15px;
 }
 
-.signup-submit {
+.card-submit {
     margin: 0 auto;
     width: 30%;
 }
+
+.card-submit a {
+    text-decoration: underline 2px;
+    font-size: 0.9em;
+}
+
+.card-submit a:hover {
+    text-decoration: overline 2px;
+}
+
+.card-submit a:visited {
+    color: black;
+}
+
 /*
 ===================================================================
 */
+
+button {
+    border: 0;
+    border-radius: 5px;
+    background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));
+    color: #fff;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background: linear-gradient(to top, steelblue, cadetblue);
+}
+
+input, textarea {
+    background-color: floralwhite;
+    border-radius: 0.25rem;
+    border: px;
+    border-color: silver;
+    padding: 0.375rem 0.75rem;
+  }

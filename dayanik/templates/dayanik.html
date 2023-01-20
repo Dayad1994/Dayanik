@@ -7,6 +7,7 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'dayanik.css' %}">
     </head>
+    <!--Я бэкендр, если вёрстка дно, сделай получше-->
     <body>
         <div class="container">
             <h1>Привет! Я Даян Исхаков.</h1>
@@ -15,19 +16,62 @@
                 <h3>Мой стэк:</h3>
                 <ul>
                     <li>Pyhton</li>
-                    <li>Django</li>
-                    <li>DRF</li>
                     <li>Git/GitHub</li>
-                    <li>html5/css3</li>
-                    <li></li>
-                    <li></li>
+                    <li>Django/DRF</li>
+                    <li>Html5/Css3</li>
+                    <li>Git/GitHub</li>
+                    <li>Linux/Bash</li>
+                    <li>Pip/Virtualenv</li>
+                    <li>Pycharm/VSCode</li>
+                    <ul>
+                        <li><b><i>Планируется</i></b></li>
+                        <li>Mysql/PostgreSQL/SQlite3</li>
+                        <li>Redis</li>
+                        <li>Celery</li>
+                        <li>jquery/js</li>
+                        <li>FastApi</li>
+                        <li>Docker</li>
+                    </ul>
+                </ul>
+                <h3>Мой опыт:</h3>
+                <ul>
+                    <li>Снэма</li>
+                    <li>Фриланс</li>
+                </ul>
+                <h3>Мои проекты:</h3>
+                <ul>
+                    <li>Dayanik</li>
+                </ul>
+                <h3>Моё образование:</h3>
+                <ul>
+                    <li>Башгу, бакалавр "Электроника и наноэлектроника"</li>
+                    <li>Курс Stepik "Поколение Python"</li>
+                </ul>
+                <h3>Мои увлечения:</h3>
+                <ul>
+                    <li>Футбол/футзал</li>
+                    <li>Рок-музыка</li>
+                    <li>Чтение книг</li>
+                    <li>Игра на гитаре</li>
+                    <li>Путешествие на машине</li>
+                </ul>
+                <h3>Мои планы:</h3>
+                <ul>
+                    <li>Senior разработчик +100500k зп</li>
+                    <li>Собственный бизнес</li>
+                    <li>Устроиться в FAANG</li>
+                    <li>Куча детей</li>
+                    <li>К пенсии переселиться на марс</li>
                 </ul>
             </div>
-            <footer>
-                <a href="{% url 'posts:dayanik' %}">Dayanik</a>
-                <a href="{% url 'posts:index' %}">Блог</a>
-                <a href="">Книжный клуб</a>
-            </footer>
+            <div class="footbar">
+                <nav>
+                    <a href="{% url 'posts:dayanik' %}">Dayanik</a>
+                    <a href="{% url 'posts:index' %}">Блог</a>
+                    <a href="">Книжный клуб</a>
+                    <a href="https://github.com/Dayad1994" target="_blank">GitHub</a>
+                </nav>
+            </div>
         </div>
     </body>
 </html>

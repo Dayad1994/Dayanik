@@ -136,3 +136,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/auth/login/'
 LOGIN_REDIRECT_URL = 'posts:index'
 # LOGOUT_REDIRECT_URL = "post"
+
+# web-site colors:
+# floralwhite
+# darkred;
+# rgb(95, 158, 160, 0.7)
+# rgb(64, 224, 208, 0.5)
+# cadetblue
+# lightcyan
+# steelblue
+# background: linear-gradient(to top, steelblue, cadetblue);
+# background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));

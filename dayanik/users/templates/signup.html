@@ -1,26 +1,28 @@
 {% extends "base.html" %}
-{% block title %}Зарегистрироваться{% endblock %}
+{% block title %}Регистрация{% endblock %}
 {% block content %}
-<article class="signup">
-    <div class="signup-header">
-        <h2>Зарегистрироваться</h2>
+<article class="card">
+    <div class="header">
+        <h2>Регистрация</h2>
     </div>
     <form method="post" action="{% url 'users:signup' %}">
-    <div class="signup-form">
+    <div class="card-form">
         {% csrf_token %}
         {% for field in form %}
-        <div class="signup-field-div">
-            <div class="signup-label"><label for="{{ field.id_for_label }}">{{ field.label }}</label></div>
-            <div class="signup-field">{{ field }}</div>
+        <div class="card-field">
+            <div class="card-label"><label for="{{ field.id_for_label }}">{{ field.label }}</label></div>
+            <div class="field">{{ field }}</div>
             {% if field.help_text %}
-            <div class="signup-help">{{ field.help_text|safe }}</div>
+            <div class="card-help">{{ field.help_text|safe }}</div>
             {% else %}
-            <div class="signup-help"></div>
+            <div class="card-help"></div>
             {% endif %}
         </div>
         {% endfor %}
-        <div class="signup-submit">
-            <input type="submit" value="Зарегистрироваться">
+        <div class="card-submit">
+            <button type="submit">
+                Зарегистрироваться
+            </button>
         </div>
     </div>
     </form>
