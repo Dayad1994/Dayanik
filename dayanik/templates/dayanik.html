@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head lang="ru">
+<html lang="ru">
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Dayanik.ru{% endblock %}</title>
@@ -8,46 +8,56 @@
         <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
         <link rel="stylesheet" href="{% static 'dayanik.css' %}">
     </head>
-    <!--Я бэкендр, если вёрстка дно, сделай получше-->
     <body>
-        <div class="container">
+    <div class="wrapper">
+        <header>
             <h1>Привет! Я Даян Исхаков.</h1>
             <h2>Я бэкенд-разработчик</h2>
-            <div class="content">
+        </header>
+        <section>
+            <article>
                 <h3>Мой стэк:</h3>
                 <ul>
                     <li>Pyhton</li>
                     <li>Git/GitHub</li>
                     <li>Django/DRF</li>
-                    <li>Html5/Css3</li>
-                    <li>Git/GitHub</li>
-                    <li>Linux/Bash</li>
-                    <li>Pip/Virtualenv</li>
-                    <li>Pycharm/VSCode</li>
+                    <li>Html5 Css3</li>
+                    <li>Git GitHub</li>
+                    <li>Linux Bash</li>
+                    <li>Pip Virtualenv</li>
+                    <li>Pycharm VSCode</li>
                     <ul>
                         <li><b><i>Планируется</i></b></li>
-                        <li>Mysql/PostgreSQL/SQlite3</li>
+                        <li>Mysql PostgreSQL SQlite3</li>
                         <li>Redis</li>
                         <li>Celery</li>
-                        <li>jquery/js</li>
+                        <li>jquery js</li>
                         <li>FastApi</li>
                         <li>Docker</li>
                     </ul>
                 </ul>
+            </article>
+            <article>
                 <h3>Мой опыт:</h3>
                 <ul>
                     <li>Снэма</li>
                     <li>Фриланс</li>
                 </ul>
+            </article>
+            <article>
                 <h3>Мои проекты:</h3>
                 <ul>
                     <li>Dayanik</li>
                 </ul>
+            </article>
+            <article>
                 <h3>Моё образование:</h3>
                 <ul>
                     <li>Башгу, бакалавр "Электроника и наноэлектроника"</li>
                     <li>Курс Stepik "Поколение Python"</li>
                 </ul>
+            </article>
+            <article>
                 <h3>Мои увлечения:</h3>
                 <ul>
                     <li>Футбол/футзал</li>
@@ -56,6 +66,8 @@
                     <li>Игра на гитаре</li>
                     <li>Путешествие на машине</li>
                 </ul>
+            </article>
+            <article>
                 <h3>Мои планы:</h3>
                 <ul>
                     <li>Senior разработчик +100500k зп</li>
@@ -64,15 +76,15 @@
                     <li>Куча детей</li>
                     <li>К пенсии переселиться на марс</li>
                 </ul>
-            </div>
-            <div class="footbar">
-                <nav>
-                    <a href="{% url 'posts:dayanik' %}">Dayanik</a>
-                    <a href="{% url 'posts:index' %}">Блог</a>
-                    <a href="">Книжный клуб</a>
-                    <a href="https://github.com/Dayad1994" target="_blank">GitHub</a>
-                </nav>
-            </div>
-        </div>
+            </article>
+        </section>
+        
+        <footer>
+            <a href="{% url 'posts:dayanik' %}">Dayanik</a>
+            <a href="{% url 'posts:index' %}">Блог</a>
+            <a href="">Книжный клуб</a>
+            <a href="https://github.com/Dayad1994" target="_blank">GitHub</a>
+        </footer>
+    </div>
     </body>
 </html>
