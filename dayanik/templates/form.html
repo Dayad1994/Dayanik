@@ -2,15 +2,15 @@
 {% block title %}Титулка{% endblock %}
 {% block content %}
 {% if '/reset/' in request.path and not validlink %}
-    <article>
-        <div class="header">
+    <article class="article">
+        <div class="article-header">
             <h2>Ошибка</h2>
             <p>Ссылка сброса пароля содержит ошибку или устарела.</p>
         </div>  
     </article>
 {% else %}
-    <article>
-        <div class="header">
+    <article class="article">
+        <div class="article-header">
             <h2>{% block header %}Заголовок{% endblock %}</h2>
         </div>
         {% for error in form.errors %}
@@ -19,28 +19,32 @@
             </div>
         {% endfor %}
         <form method="post">
-            <div class="card-form">
+            <div class="form">
                 {% csrf_token %}
                 {% for field in form %}
-                    <div class="card-field">
-                        <div class="card-label"><label for="{{ field.id_for_label }}">{{ field.label }}</label></div>
-                        <div class="field">{{ field }}</div>
-                        {% if field.help_text %}
-                            <div class="card-help">{{ field.help_text|safe }}</div>
-                            {% else %}
-                            <div class="card-help"></div>
-                        {% endif %}
+                    <div class="field">
+                        <div class="label">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        </div>
+                        <div class="input-help">
+                            {{ field }}
+                            <div class="help">
+                                {% if field.help_text %}
+                                    {{ field.help_text|safe }}
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
-                <div class="card-submit">
-                    <button type="submit">
-                        {% block button %}Кнопка{% endblock %}
-                    </button>
+                <div class="submit">
                     {% if '/login/' in request.path %}
                         <a href="{% url 'password_reset' %}">
                             Забыли пароль?
                         </a>
                     {% endif %}
+                    <button type="submit">
+                        {% block button %}Кнопка{% endblock %}
+                    </button>
                 </div>
             </div>
         </form>

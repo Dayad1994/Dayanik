@@ -18,18 +18,24 @@ section, header {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+    gap: 1em;
 }
 
 footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
     padding: 1em;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: .5em;
 }
 
 a:link, a:visited {

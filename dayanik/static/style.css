@@ -4,48 +4,25 @@ body {
 }
 
 .wrapper {
-    display: flex;
+    display: flex;  
     flex-flow: row wrap;
 }
 
 .wrapper > * {
+    padding: 10px;
     flex: 1 100%;
 }
 
-/*
-main
-================================================================
-*/
-
-main {
-    display: flex;
-    flex-flow: row wrap;
+@media screen and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
 }
 
-section {
-    flex: 4;
-    order: 1;
-}
-
-.aside-1 { 
-    flex: 2;
-    background-color: aqua;
-}
-.aside-2 { 
-    flex: 2;
-    order: 2;
-    background-color: blueviolet;
-}
-
-/*
-section
-================================================================
-*/
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+@media screen and (min-width: 900px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
 }
 
 /*
@@ -57,7 +34,7 @@ header, footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
     padding: 1em;
 }
 
@@ -68,4 +45,46 @@ a:link, a:visited {
 
 a:hover {
     text-decoration: overline;
+}
+
+.article {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15%;
+    gap: 1em;
+}
+
+.field {
+    display: flex;
+    padding: .5em;
+    justify-content: flex-start;
+    gap: .5em;
+}
+
+.label {
+    flex: 1;
+}
+
+.input-help {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.help {
+    font-size: 0.7em;
+}
+
+textarea {
+    width: 100%;
+}
+
+.submit {
+    display: flex;
+    gap: .5em;
+    justify-content: flex-end;
 }

@@ -1,6 +1,7 @@
 body {
     background-color: floralwhite;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
 }
 
 .wrapper {
@@ -17,21 +18,29 @@ section, header {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+    gap: 1em;
 }
 
 footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 2em;
+    padding: 1em;
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: .5em;
 }
 
 a:link, a:visited {
     color: black;
+    text-align: center;
 }
 
 a:hover {

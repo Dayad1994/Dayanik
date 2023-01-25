@@ -10,18 +10,16 @@
     </head>
     <body>
     <div class="wrapper">
-        <header>
+        <header class="header">
             {% include 'nav.html' %}
         </header>
-        <main>
-            <section>
-                {% block content %}
-                {% endblock %}
-            </section>
-            <aside class="aside aside-1">sdfghjkl dfghj sdfgh sdfg sdfgh</aside>
-            <aside class="aside aside-2">asdfghjasdfghj sdfg sdfgh asdfgh </aside>
-        </main>
-        <footer>
+        <section class="main">
+            {% block content %}
+            {% endblock %}
+        </section>
+        <aside class="aside aside-1"></aside>
+        <aside class="aside aside-2"></aside>
+        <footer class="footer">
             {% include 'footer.html' %}
         </footer>
     </div>
