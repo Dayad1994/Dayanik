@@ -1,6 +1,7 @@
 body {
     background-color: floralwhite;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
 }
 
 .wrapper {
@@ -23,7 +24,8 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 1em;
+    padding: 1em;
 }
 
 ul {
@@ -32,6 +34,7 @@ ul {
 
 a:link, a:visited {
     color: black;
+    text-align: center;
 }
 
 a:hover {

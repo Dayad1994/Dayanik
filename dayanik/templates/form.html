@@ -2,14 +2,14 @@
 {% block title %}Титулка{% endblock %}
 {% block content %}
 {% if '/reset/' in request.path and not validlink %}
-    <article class="card">
+    <article>
         <div class="header">
             <h2>Ошибка</h2>
             <p>Ссылка сброса пароля содержит ошибку или устарела.</p>
         </div>  
     </article>
 {% else %}
-    <article class="card">
+    <article>
         <div class="header">
             <h2>{% block header %}Заголовок{% endblock %}</h2>
         </div>

@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for post in posts %}
-        <article class="flex-article">
-            <header>
+        <article>
+            <div class="header">
                 <h2>{{ post.title }}</h2>
                 <p>@{{ post.author.username }} {{ post.pub_date }}</p>
-            </header>
+            </div>
             <p>{{ post.text|linebreaksbr }}</p>
+            <hr>
         </article>
     {% endfor %}
 {% endblock %}

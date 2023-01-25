@@ -1,218 +1,71 @@
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /*background-image: url('back_1920x1200.jpg');*/
-    background: floralwhite;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-}
-
-/*
-===================================================================
-дизайн
-*/
-
-.flex-topbar {
-    width: 100%;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.flex-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));
-    color: #fff;
-    width: 100%;
-    padding: 16px;
-}
-
-.flex-nav a {
-    text-decoration: none;
-    padding: 8px 16px;
-}
-
-.flex-nav a:hover {
-    background: linear-gradient(to top, steelblue, cadetblue);
-    border-radius: 7px;
-    padding: 8px 16px;
-}
-
-.flex-nav a:visited {
-    color: #fff;
-}
-
-.flex-nav a:active {
-    color: black;
-}
-
-.flex-content {
-    width: 720px;
-    flex-grow: 1;
-    background: linear-gradient(to top, rgb(95, 158, 160, 0.7), rgb(64, 224, 208, 0.5));
-    padding-bottom: 50px;
-    padding-top: 65px;
-}
-
-.flex-article {
-    margin-bottom: 15px;
-    background: lightcyan;
-    padding: 20px;
-    font-size: 1em;
-    border-radius: 10px;
-}
-
-.flex-footbar {
-    width: 100%;
-}
-
-.flex-footer {
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(to top, steelblue, cadetblue);
-    color: #fff;
-    width: 100%;
-    height: auto;
-}
-
-.flex-footer a {
-    text-decoration: none;
-    padding: 8px 16px;
-    margin: 8px 0 8px;
-}
-
-.flex-footer a:hover {
-    background: linear-gradient(to top, steelblue, rgb(64, 224, 208));
-    border-radius: 7px;
-    padding: 8px 16px;
-}
-
-.flex-footer a:visited {
-    color: #fff;
-}
-
-.flex-footer a:active {
-    color: black;
-}
-
-.flex-article header h2 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.flex-article header p {
-    font-size: .7em;
-    color:gray;
-    margin: 0;
-}
-
-
-/*
-===================================================================
-форма регистрации
-*/
-
-.card {
-    background: lightcyan;
-    padding: 20px;
-    font-size: 1em;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card .header h2 {
-    text-align: center;
-}
-
-.card-form {
-    width: 720px;
-}
-
-.card-field {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px 0px;
-}
-
-
-.card-label {
-    width: 30%;
-}
-
-.field {
-    width: 30%;
-}
-
-.card-help {
-    width: 30%;
-    color: silver;
-    font-size: 0.7em;
-}
-
-.card-help ul {
-    font-size: 1em;
-    padding-left: 15px;
-}
-
-.card-submit {
-    margin: 0 auto;
-    width: 30%;
-}
-
-.card-submit a {
-    text-decoration: underline 2px;
-    font-size: 0.9em;
-}
-
-.card-submit a:hover {
-    text-decoration: overline 2px;
-}
-
-.card-submit a:visited {
-    color: black;
-}
-
-.alert {
-    color: darkred;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    text-align: center;
-    padding: 0.3em;
-    margin: 0em 30%;
-    border-radius: 0.25rem;
-  }
-
-/*
-===================================================================
-*/
-
-button {
-    border: 0;
-    border-radius: 5px;
-    background: linear-gradient(to top, cadetblue, rgb(64, 224, 208));
-    color: #fff;
-    padding: 8px 16px;
-}
-
-button:hover {
-    background: linear-gradient(to top, steelblue, cadetblue);
-}
-
-input, textarea {
     background-color: floralwhite;
-    border-radius: 0.25rem;
-    border: px;
-    border-color: silver;
-    padding: 0.375rem 0.75rem;
-  }
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
+
+/*
+main
+================================================================
+*/
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    flex: 4;
+    order: 1;
+}
+
+.aside-1 { 
+    flex: 2;
+    background-color: aqua;
+}
+.aside-2 { 
+    flex: 2;
+    order: 2;
+    background-color: blueviolet;
+}
+
+/*
+section
+================================================================
+*/
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/*
+footer, header
+================================================================
+*/
+
+header, footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+a:link, a:visited {
+    color: black;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: overline;
+}

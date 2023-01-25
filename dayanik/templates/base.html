@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head lang="ru">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Блог{% endblock %}</title>
-    {% load static %}
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<!--Я бэкендр, если вёрстка дно, сделай получше-->
-<body>
-    <div class="flex-container">
-        {% include 'nav.html' %}
-            <section class="flex-content">
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Блог{% endblock %}</title>
+        {% load static %}
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    <div class="wrapper">
+        <header>
+            {% include 'nav.html' %}
+        </header>
+        <main>
+            <section>
                 {% block content %}
                 {% endblock %}
             </section>
-        {% include 'footer.html' %}
+            <aside class="aside aside-1">sdfghjkl dfghj sdfgh sdfg sdfgh</aside>
+            <aside class="aside aside-2">asdfghjasdfghj sdfg sdfgh asdfgh </aside>
+        </main>
+        <footer>
+            {% include 'footer.html' %}
+        </footer>
     </div>
-</body>
+    </body>
 </html>
