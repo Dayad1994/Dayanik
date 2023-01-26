@@ -69,7 +69,7 @@ main, content, form
 }
 
 .form-section {
-    max-width: 500px;
+    max-width: 350px;
 }
 
 form {
@@ -80,17 +80,6 @@ form {
     display: flex;
     flex-direction: column;
     gap: .4rem;
-}
-
-.field {
-    display: flex;
-    justify-content: flex-start;
-    gap: .4rem;
-}
-
-.label {
-    flex: 1;
-    font-size: 1.2rem;
 }
 
 .input-help {
@@ -110,7 +99,8 @@ input, textarea, button
 */
 
 textarea {
-    width: 100%;
+    width: 50vw;
+    min-width: 207px;
     font-size: 1rem;
     background-color: floralwhite;
 }

@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
 from .models import Post
+from .forms import PostForm
 
 
 User = get_user_model()
@@ -20,9 +21,21 @@ def index(request):
     return render(request, 'index.html', {'posts': posts})
 
 
+'''
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'text']
+    success_url = reverse_lazy('posts:index')
+    template_name = 'new_post.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+'''
+
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    form_class = PostForm
     success_url = reverse_lazy('posts:index')
     template_name = 'new_post.html'
 
