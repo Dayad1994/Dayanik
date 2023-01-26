@@ -13,8 +13,13 @@ body {
     flex: 1 100%;
 }
 
+@media screen and (max-width: 599px) {
+    header, footer { gap: 1rem; }
+}
+
 @media screen and (min-width: 600px) {
     .aside { flex: 1 0 0; }
+    header, footer { gap: 2rem; }
 }
 
 @media screen and (min-width: 900px) {
@@ -23,6 +28,7 @@ body {
     .main    { order: 2; }
     .aside-2 { order: 3; }
     .footer  { order: 4; }
+    header, footer { gap: 5rem; }
 }
 
 /*
@@ -34,108 +40,8 @@ header, footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 2em;
-    padding: 1em;
-    font-size: 1.5em;
-}
-
-a:link, a:visited {
-    color: black;
-    text-align: center;
-}
-
-a:hover {
-    text-decoration: overline;
-}
-
-.article {
-    text-align: center;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15%;
-    gap: 1em;
-}
-
-.field {
-    display: flex;
-    padding: .5em;
-    justify-content: flex-start;
-    gap: .5em;
-}
-
-.label {
-    flex: 1;
-}
-
-.input-help {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-}
-
-.help {
-    font-size: 0.7em;
-}
-
-textarea {
-    width: 100%;
-}
-
-.submit {
-    display: flex;
-    gap: .5em;
-    justify-content: flex-end;
-}
-
-
-
-
-/*
-==============================================================================================
-*/
-
-body {
-    background-color: floralwhite;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.wrapper {
-    display: flex;  
-    flex-flow: row wrap;
-}
-
-.wrapper > * {
-    padding: 10px;
-    flex: 1 100%;
-}
-
-@media screen and (min-width: 600px) {
-    .aside { flex: 1 0 0; }
-}
-
-@media screen and (min-width: 900px) {
-    .main    { flex: 3 0px; }
-    .aside-1 { order: 1; } 
-    .main    { order: 2; }
-    .aside-2 { order: 3; }
-    .footer  { order: 4; }
-}
-
-/*
-footer, header
-================================================================
-*/
-
-header, footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 2em;
-    padding: 1em;
-    font-size: 1.5em;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 a:link, a:visited {
@@ -154,7 +60,7 @@ main, content, form
 
 .main {
     min-height: 400px;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 .form-article {
@@ -173,18 +79,18 @@ form {
 .form {
     display: flex;
     flex-direction: column;
-    gap: .4em;
+    gap: .4rem;
 }
 
 .field {
     display: flex;
     justify-content: flex-start;
-    gap: .4em;
+    gap: .4rem;
 }
 
 .label {
     flex: 1;
-    font-size: .8em;
+    font-size: 1.2rem;
 }
 
 .input-help {
@@ -194,7 +100,8 @@ form {
 }
 
 .help {
-    font-size: 0.6em;
+    color: darkgray;
+    font-size: 0.8rem;
 }
 
 /*
@@ -204,13 +111,13 @@ input, textarea, button
 
 textarea {
     width: 100%;
-    font-size: 1em;
+    font-size: 1rem;
     background-color: floralwhite;
 }
 
 input {
-    padding: 0.3em;
-    font-size: 1em;
+    padding: 0.3rem;
+    font-size: 1rem;
     background-color: floralwhite;
 }
 
@@ -219,16 +126,20 @@ input:focus, textarea:focus {
 }
 
 .submit {
-    margin: .5em 0;
+    margin: .5rem 0;
     display: flex;
-    gap: .5em;
+    gap: .5rem;
     justify-content: flex-end;
-    font-size: .8em;
+    font-size: 1rem;
+}
+
+.submit > a {
+    padding: .4rem;
 }
 
 button {
     background-color: Linen;
-    padding: .4em;
+    padding: .4rem;
     border-color: GhostWhite;
 }
 
@@ -241,12 +152,12 @@ post
 ================================================================
 */
 
-.article-header > h2 {
-    margin: 0;
+.post-header > h2 {
+    margin-bottom: 0;
 }
 
-.header > p {
-    font-size: .8em;
+.post-header > p {
+    font-size: .8rem;
     color: darkgray;
     margin: 0;
 }
