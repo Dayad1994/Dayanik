@@ -1,6 +1,6 @@
 body {
     background-color: floralwhite;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .wrapper {
@@ -36,6 +36,7 @@ header, footer {
     justify-content: center;
     gap: 2em;
     padding: 1em;
+    font-size: 1.5em;
 }
 
 a:link, a:visited {
@@ -87,4 +88,169 @@ textarea {
     display: flex;
     gap: .5em;
     justify-content: flex-end;
+}
+
+
+
+
+/*
+==============================================================================================
+*/
+
+body {
+    background-color: floralwhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+}
+
+@media screen and (min-width: 900px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+}
+
+/*
+footer, header
+================================================================
+*/
+
+header, footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+a:link, a:visited {
+    color: black;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: overline;
+}
+
+/*
+main, content, form
+================================================================
+*/
+
+.main {
+    min-height: 400px;
+    font-size: 1.3em;
+}
+
+.form-article {
+    display: flex;
+    justify-content: center;
+}
+
+.form-section {
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+}
+
+.field {
+    display: flex;
+    justify-content: flex-start;
+    gap: .4em;
+}
+
+.label {
+    flex: 1;
+    font-size: .8em;
+}
+
+.input-help {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.help {
+    font-size: 0.6em;
+}
+
+/*
+input, textarea, button
+================================================================
+*/
+
+textarea {
+    width: 100%;
+    font-size: 1em;
+    background-color: floralwhite;
+}
+
+input {
+    padding: 0.3em;
+    font-size: 1em;
+    background-color: floralwhite;
+}
+
+input:focus, textarea:focus {
+    background-color: white;
+}
+
+.submit {
+    margin: .5em 0;
+    display: flex;
+    gap: .5em;
+    justify-content: flex-end;
+    font-size: .8em;
+}
+
+button {
+    background-color: Linen;
+    padding: .4em;
+    border-color: GhostWhite;
+}
+
+button:hover {
+    background-color: Azure;
+}
+
+/*
+post
+================================================================
+*/
+
+.article-header > h2 {
+    margin: 0;
+}
+
+.header > p {
+    font-size: .8em;
+    color: darkgray;
+    margin: 0;
+}
+
+article > p {
+    line-height: 1.5;
 }

@@ -9,8 +9,9 @@
         </div>  
     </article>
 {% else %}
-    <article class="article">
-        <div class="article-header">
+<article class="form-article">
+    <section class="form-section">
+        <div class="form-header">
             <h2>{% block header %}Заголовок{% endblock %}</h2>
         </div>
         {% for error in form.errors %}
@@ -48,6 +49,7 @@
                 </div>
             </div>
         </form>
-    </article>
+    </section>
+</article>
     {% endif %}
 {% endblock %}

@@ -1,6 +1,6 @@
 body {
     background-color: floralwhite;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .wrapper {
@@ -13,8 +13,13 @@ body {
     flex: 1 100%;
 }
 
+@media screen and (max-width: 599px) {
+    header, footer { gap: 1rem; }
+}
+
 @media screen and (min-width: 600px) {
     .aside { flex: 1 0 0; }
+    header, footer { gap: 2rem; }
 }
 
 @media screen and (min-width: 900px) {
@@ -23,6 +28,7 @@ body {
     .main    { order: 2; }
     .aside-2 { order: 3; }
     .footer  { order: 4; }
+    header, footer { gap: 5rem; }
 }
 
 /*
@@ -34,8 +40,8 @@ header, footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 2em;
-    padding: 1em;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 a:link, a:visited {
@@ -47,26 +53,44 @@ a:hover {
     text-decoration: overline;
 }
 
-.article {
-    text-align: center;
+/*
+main, content, form
+================================================================
+*/
+
+.main {
+    min-height: 400px;
+    font-size: 1.3rem;
+}
+
+.form-article {
+    display: flex;
+    justify-content: center;
+}
+
+.form-section {
+    max-width: 500px;
+}
+
+form {
+    display: flex;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    margin: 0 15%;
-    gap: 1em;
+    gap: .4rem;
 }
 
 .field {
     display: flex;
-    padding: .5em;
     justify-content: flex-start;
-    gap: .5em;
+    gap: .4rem;
 }
 
 .label {
     flex: 1;
+    font-size: 1.2rem;
 }
 
 .input-help {
@@ -76,15 +100,68 @@ a:hover {
 }
 
 .help {
-    font-size: 0.7em;
+    color: darkgray;
+    font-size: 0.8rem;
 }
+
+/*
+input, textarea, button
+================================================================
+*/
 
 textarea {
     width: 100%;
+    font-size: 1rem;
+    background-color: floralwhite;
+}
+
+input {
+    padding: 0.3rem;
+    font-size: 1rem;
+    background-color: floralwhite;
+}
+
+input:focus, textarea:focus {
+    background-color: white;
 }
 
 .submit {
+    margin: .5rem 0;
     display: flex;
-    gap: .5em;
+    gap: .5rem;
     justify-content: flex-end;
+    font-size: 1rem;
+}
+
+.submit > a {
+    padding: .4rem;
+}
+
+button {
+    background-color: Linen;
+    padding: .4rem;
+    border-color: GhostWhite;
+}
+
+button:hover {
+    background-color: Azure;
+}
+
+/*
+post
+================================================================
+*/
+
+.post-header > h2 {
+    margin-bottom: 0;
+}
+
+.post-header > p {
+    font-size: .8rem;
+    color: darkgray;
+    margin: 0;
+}
+
+article > p {
+    line-height: 1.5;
 }
