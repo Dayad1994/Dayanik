@@ -15,11 +15,13 @@ body {
 
 @media screen and (max-width: 599px) {
     header, footer { gap: 1rem; }
+    textarea { width: 90vw; }
 }
 
 @media screen and (min-width: 600px) {
     .aside { flex: 1 0 0; }
     header, footer { gap: 2rem; }
+    textarea { width: 70vw; }
 }
 
 @media screen and (min-width: 900px) {
@@ -29,6 +31,7 @@ body {
     .aside-2 { order: 3; }
     .footer  { order: 4; }
     header, footer { gap: 5rem; }
+    textarea { width: 50vw; }
 }
 
 /*
@@ -99,7 +102,6 @@ input, textarea, button
 */
 
 textarea {
-    width: 50vw;
     min-width: 207px;
     font-size: 1rem;
     background-color: floralwhite;
