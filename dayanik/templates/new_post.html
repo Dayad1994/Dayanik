@@ -1,36 +1,30 @@
-{% extends 'base.html' %}
-{% block title %}Новая статья{% endblock %}
-{% block content %}
-<article class="post-form-article">
-    <section class="post-form-section">
-        <div class="post-form-header">
-            <h2>{% block header %}Новая статья{% endblock %}</h2>
+<section class="post-form-section">
+    <div class="post-form-header">
+        <h2>{% block header %}Новая статья{% endblock %}</h2>
+    </div>
+    {% for error in form.errors %}
+        <div class="alert" role="alert">
+            {{ error }}
         </div>
-        {% for error in form.errors %}
-            <div class="alert" role="alert">
-                {{ error }}
-            </div>
-        {% endfor %}
-        <form method="post">
-            <div class="form">
-                {% csrf_token %}
-                {% for field in form %}
-                    <div class="input-help">
-                        {{ field }}
-                        <div class="help">
-                            {% if field.help_text %}
-                                {{ field.help_text|safe }}
-                            {% endif %}
-                        </div>
+    {% endfor %}
+    <form method="post">
+        <div class="form">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="input-help">
+                    {{ field }}
+                    <div class="help">
+                        {% if field.help_text %}
+                            {{ field.help_text|safe }}
+                        {% endif %}
                     </div>
-                {% endfor %}
-                <div class="submit">
-                    <button type="submit">
-                        {% block button %}Опубликовать{% endblock %}
-                    </button>
                 </div>
+            {% endfor %}
+            <div class="submit">
+                <button type="submit">
+                    {% block button %}Опубликовать{% endblock %}
+                </button>
             </div>
-        </form>
-    </section>
-</article>
-{% endblock %}
+        </div>
+    </form>
+</section>

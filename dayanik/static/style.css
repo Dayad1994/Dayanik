@@ -15,7 +15,7 @@ body {
 
 @media screen and (max-width: 599px) {
     header, footer { gap: 1rem; }
-    textarea { width: 90vw; }
+    textarea { width: 80vw; }
 }
 
 @media screen and (min-width: 600px) {
@@ -66,6 +66,8 @@ main, content, form
 */
 
 .main {
+    display: flex;
+    flex-direction: column;
     min-height: 400px;
     font-size: 1.3rem;
 }

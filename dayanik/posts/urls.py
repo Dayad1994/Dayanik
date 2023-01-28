@@ -5,7 +5,7 @@ from . import views
 
 app_name = 'posts'
 urlpatterns = [
-    path('', views.dayanik, name='dayanik'),
-    path('blog/', views.index, name='index'),
-    path('new/', views.PostCreateView.as_view(), name='new_post')
+    path('blog/', views.BlogView.as_view(), name='index'),
+    path('<str:username>/', views.ProfileView.as_view(), name='profile'),
+    path('', views.dayanik, name='dayanik')
 ]

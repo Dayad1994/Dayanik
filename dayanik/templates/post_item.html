@@ -1,0 +1,8 @@
+<article class="article">
+    <div class="post-header">
+        <h2>{{ post.title }}</h2>
+        <p><a href="{% url 'posts:profile' post.author.username %}">@{{ post.author.username }}</a> {{ post.pub_date }}</p>
+    </div>
+    <p>{{ post.text|linebreaksbr }}</p>
+    <hr>
+</article>

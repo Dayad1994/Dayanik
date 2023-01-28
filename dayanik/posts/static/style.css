@@ -9,7 +9,6 @@ body {
 }
 
 .wrapper > * {
-    padding: 10px;
     flex: 1 100%;
 }
 
@@ -66,6 +65,8 @@ main, content, form
 */
 
 .main {
+    display: flex;
+    flex-direction: column;
     min-height: 400px;
     font-size: 1.3rem;
 }
@@ -106,7 +107,6 @@ input, textarea, button
 */
 
 textarea {
-    min-width: 207px;
     font-size: 1rem;
     background-color: floralwhite;
 }
