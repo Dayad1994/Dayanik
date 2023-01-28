@@ -34,6 +34,10 @@ body {
     textarea { width: 50vw; }
 }
 
+@media screen and (min-width: 1200px) {
+    header, footer { gap: 5rem; }
+}
+
 /*
 footer, header
 ================================================================
