@@ -149,7 +149,7 @@ post
 */
 
 .post-header > h2 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
 .post-header > p {
@@ -158,6 +158,14 @@ post
     margin: 0;
 }
 
-article > p {
+.article > p {
     line-height: 1.5;
+    margin-bottom: 0;
+
+}
+
+.article {
+    padding-left: 1rem;
+    border-left: 2px solid;
+    margin-bottom: 3rem;
 }

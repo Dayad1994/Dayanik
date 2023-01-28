@@ -1,8 +1,7 @@
 <article class="article">
     <div class="post-header">
-        <h2>{{ post.title }}</h2>
-        <p><a href="{% url 'posts:profile' post.author.username %}">@{{ post.author.username }}</a> {{ post.pub_date }}</p>
+        <h2><a href="{% url 'posts:post' post.pk %}">{{ post.title }}</a></h2>
+        <p><a href="{% url 'posts:profile' post.author.username %}">@{{ post.author.username }}</a> {{ post.pub_date }} {% if request.user == post.author %}<a href="{% url 'posts:post_edit' post.pk %}">Редактирование</a>{% endif %}</p>
     </div>
     <p>{{ post.text|linebreaksbr }}</p>
-    <hr>
 </article>

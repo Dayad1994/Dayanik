@@ -1,6 +1,5 @@
 <a href="{% url 'posts:dayanik' %}">Dayanik</a>
 <a href="{% url 'posts:index' %}">Блог</a>
-<a href="">Книжный клуб</a>
 {% if user.is_authenticated %}
 <a href="{% url 'posts:profile' request.user.username %}">Мой профиль</a>
 {% else %}

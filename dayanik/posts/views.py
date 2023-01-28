@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, UpdateView
 
 from .models import Post
 from .forms import PostForm
@@ -21,6 +21,24 @@ class BlogView(ListView):
     template_name = 'index.html'
     context_object_name = 'posts'
     queryset = Post.objects.all()
+
+
+class PostView(DetailView):
+    template_name = 'post.html'
+    context_object_name = 'post'
+    model = Post
+
+
+class PostUpdateView(UpdateView):
+    template_name = 'post_edit.html'
+    model = Post
+    fields = ['title', 'text']
+    success_url = reverse_lazy('posts:index')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['profile'] = get_object_or_404(Post, pk=self.kwargs['pk']).author
+        return context
 
 
 class ProfileView(DetailView, LoginRequiredMixin, CreateView):

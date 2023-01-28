@@ -1,6 +1,12 @@
 <section class="post-form-section">
     <div class="post-form-header">
-        <h2>{% block header %}Новая статья{% endblock %}</h2>
+        <h2>
+            {% if 'edit' in request.path %}
+            Редактирование
+            {% else %}
+            Новая статья
+            {% endif %}
+        </h2>
     </div>
     {% for error in form.errors %}
         <div class="alert" role="alert">
@@ -22,7 +28,11 @@
             {% endfor %}
             <div class="submit">
                 <button type="submit">
-                    {% block button %}Опубликовать{% endblock %}
+                    {% if 'edit' in request.path %}
+                    Редактировать
+                    {% else %}
+                    Опубликовать
+                    {% endif %}
                 </button>
             </div>
         </div>
