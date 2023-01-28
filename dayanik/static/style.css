@@ -30,7 +30,7 @@ body {
     .main    { order: 2; }
     .aside-2 { order: 3; }
     .footer  { order: 4; }
-    header, footer { gap: 5rem; }
+    header, footer { gap: 3rem; }
     textarea { width: 50vw; }
 }
 
